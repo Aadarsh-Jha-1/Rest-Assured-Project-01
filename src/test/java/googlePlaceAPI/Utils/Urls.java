@@ -16,5 +16,12 @@ public class Urls {
 	    public static String getAddPlaceEndPoint() {
 	        return addPlaceEndPoint;
 	    }
+	    
+	    
+	    private static String getPlace = "maps/api/place/get/json";
+		 
+	    public static String getPlaceEndPoint() {
+	        return getPlace;
+	    }
 
 }

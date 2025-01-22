@@ -35,13 +35,13 @@ public class UtilityFunctions {
 		
 		String responseData = 
 
-		given()
+		 given()
 		.queryParam("key","qaclick123")
 		.header("Content-Type","application/json")
 		.body(Payload.getAddPlacePayload())
 	    .when()
 		.post(Urls.getAddPlaceEndPoint())
-		.then()
+	    .then()
 		.assertThat()
 		.statusCode(200)
 		.body("scope", equalTo("APP"))
@@ -53,6 +53,29 @@ public class UtilityFunctions {
 		
 		return responseData;
 		
+	}
+	
+	
+	
+	//Get Place API
+	
+	public static void GetPlaceAPI(String placeIdValue) {
+		
+		RestAssured.baseURI = Urls.getBaseUrl();
+		
+		RestAssured.baseURI = Urls.getBaseUrl();
+
+		     given()
+		    .queryParam("place_id", placeIdValue)
+		    .queryParam("key", "qaclick123")
+		    .when()
+		    .get(Urls.getPlaceEndPoint())
+		    .then()
+		    .assertThat()
+		    .statusCode(200)  // Verify status code
+		    .body("name", equalTo("Frontline house"))
+			.body("types",equalTo("shoe park,shop"))
+			.body("address",equalTo("29, side layout, cohen 09"));
 	}
 	
 

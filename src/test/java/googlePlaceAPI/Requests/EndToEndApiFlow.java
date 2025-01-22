@@ -16,6 +16,8 @@ public class EndToEndApiFlow {
 		
 		// Add Others Methods 
 		
+		UtilityFunctions.GetPlaceAPI(placeID);
+		
 	
 	}
 
