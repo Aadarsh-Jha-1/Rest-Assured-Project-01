@@ -23,5 +23,11 @@ public class Urls {
 	    public static String getPlaceEndPoint() {
 	        return getPlace;
 	    }
+	    
+	    private static String updatePlace = "maps/api/place/update/json";
+		 
+	    public static String updatePlaceEndPoint() {
+	        return updatePlace;
+	    }
 
 }

@@ -59,24 +59,46 @@ public class UtilityFunctions {
 	
 	//Get Place API
 	
-	public static void GetPlaceAPI(String placeIdValue) {
-		
-		RestAssured.baseURI = Urls.getBaseUrl();
+	public static void GetPlaceAPI(String placeIdValue, String Address) {
 		
 		RestAssured.baseURI = Urls.getBaseUrl();
 
 		     given()
 		    .queryParam("place_id", placeIdValue)
 		    .queryParam("key", "qaclick123")
+		    
+		    .log().all()
+		    
 		    .when()
 		    .get(Urls.getPlaceEndPoint())
 		    .then()
+		    .log().all()
 		    .assertThat()
 		    .statusCode(200)  // Verify status code
 		    .body("name", equalTo("Frontline house"))
 			.body("types",equalTo("shoe park,shop"))
-			.body("address",equalTo("29, side layout, cohen 09"));
+			.body("address",equalTo(Address));
 	}
 	
+	
+	
+	
+	//Update Place API
+	
+	public static void UpdatePlaceAPI(String placeIdValue) {
+	    RestAssured.baseURI = Urls.getBaseUrl();
+
+	    given()
+	        .queryParam("place_id", placeIdValue)
+	        .queryParam("key", "qaclick123")
+	        .body(Payload.getUpdatePlacePayload(placeIdValue))
+	        .when()
+	        .put(Urls.updatePlaceEndPoint())
+	        .then()
+	        .assertThat()
+	        .statusCode(200)
+	        .body("msg", equalTo("Address successfully updated"));
+	}
+
 
 }
