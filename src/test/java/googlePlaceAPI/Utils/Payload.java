@@ -22,22 +22,53 @@ public class Payload {
 			+ "}";
 	
 	
-	private static String updatePlacePayload(String placeID) {
-	    return "{\r\n"
+	private static String updatePlacePayload(String placeID) 
+	
+		{
+	
+		return "{\r\n"
 	            + "\"place_id\":\"" + placeID + "\",\r\n"
 	            + "\"address\":\"70 winter walk, USA\",\r\n"
 	            + "\"key\":\"qaclick123\"\r\n"
 	            + "}";
-	}
 	
-	public static String getAddPlacePayload() {
-		
-		return addPlacePayload;
-		
-	}
-
-	public static String getUpdatePlacePayload(String placeID) {
+		}
+	
+	
+	private static String deletePlacePayload(String placeID) 
+	
+		{
+	
+		return "{\n\"place_id\":\"" + placeID + "\"\n}";
+	
+		}
+	
+	
+	
+	
+	
+	public static String getAddPlacePayload() 
+	
+		{
+	
+		return addPlacePayload;		
+	
+		}
+	
+	public static String getUpdatePlacePayload(String placeID) 
+	
+		{
+	
 		return updatePlacePayload(placeID);
-	}
+	
+		}
+	
+	public static String getdeletePlacePayload(String placeIdValue) 
+	
+		{
+	
+		return deletePlacePayload(placeIdValue);
+	
+		}
 
 }
