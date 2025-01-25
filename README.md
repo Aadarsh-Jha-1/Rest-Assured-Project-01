@@ -1,6 +1,4 @@
-Here’s the `README.md` file with all the necessary markdown stylings like bold text, code blocks, and headings that you can directly paste into your `README.md`:
 
-```markdown
 # Google Place API - API Testing with Rest Assured
 
 ## Project Overview
@@ -17,7 +15,7 @@ This project demonstrates API testing using **Rest Assured** in **Java**. It foc
 
 The project is organized into the following structure for better modularity and maintainability:
 
-```
+```markdown
 Google-Place-API-Testing/
 │
 ├── src/
