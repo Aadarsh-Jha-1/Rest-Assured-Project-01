@@ -106,15 +106,3 @@ Contributions are welcome! You can contribute to this repository by:
 - Suggesting new features or enhancements.
 - Submitting pull requests to improve the project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-This `README.md` is now properly styled with:
-
-- **Bold text** for key technologies and important terms.
-- **Code blocks** for code examples and configuration files.
-- Clear **headings** and subheadings to organize the content.
-
-You can now directly copy and paste this into your `README.md` file! Let me know if you'd like any further adjustments!
